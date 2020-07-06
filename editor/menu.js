@@ -1,4 +1,5 @@
 const cssToObject = require("css-to-object");
+const fs = require("fs");
 
 // aktualisierungsintervall
 delay = "inactive";

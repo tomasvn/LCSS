@@ -1,10 +1,10 @@
 // css property lists für dropdowns
-CSS_display = "inline block flex grid inline-block inherit";
-CSS_units = "px vh pt % em in mm cm pt pc";
-CSS_colors = "blue red black white yellow";
-CSS_align = "center left right top bottom";
+const CSS_DISPLAY = "inline block flex grid inline-block inherit";
+const CSS_UNITS = "px vh pt % em in mm cm pt pc";
+const CSS_COLORS = "blue red black white yellow";
+const CSS_ALIGN = "center left right top bottom";
 
-oldbox = false;
+let oldbox = false;
 
 function createInterface(container, property, values) {
     if (values != null) {
@@ -66,12 +66,12 @@ function dropdown(property, userValue) {
     selection = createElement("select", "dropdown");
 
     // schauen in welcher liste der wert vorkommt
-    if (CSS_display.includes(userValue)) {
-        options = CSS_display.split(" ");
-    } else if (CSS_colors.includes(userValue)) {
-        options = CSS_colors.split(" ");
-    } else if (CSS_align.includes(userValue)) {
-        options = CSS_align.split(" ");
+    if (CSS_DISPLAY.includes(userValue)) {
+        options = CSS_DISPLAY.split(" ");
+    } else if (CSS_COLORS.includes(userValue)) {
+        options = CSS_COLORS.split(" ");
+    } else if (CSS_ALIGN.includes(userValue)) {
+        options = CSS_ALIGN.split(" ");
     }
 
     // dropdown optionen einfügen
@@ -96,7 +96,7 @@ function dropdown(property, userValue) {
 }
 
 function checkDropdown(data) {
-    checklist = CSS_display + CSS_colors + CSS_align;
+    checklist = CSS_DISPLAY + CSS_COLORS + CSS_ALIGN;
 
     if (checklist.includes(data)) {
         return true;

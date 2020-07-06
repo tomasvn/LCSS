@@ -1,8 +1,8 @@
 const { ipcRenderer } = require("electron");
 const remote = require("electron").remote;
 
-path = "";
-url = "";
+let path = "";
+let url = "";
 
 function getDirectory() {
     path = ipcRenderer.sendSync("requestPath", "");
@@ -37,7 +37,7 @@ function validateInput() {
 }
 
 function determineStart(files) {
-    value = "";
+    let value = "";
 
     for (let i = 0; i < files.length; i++) {
         if (files[i].name.includes("index")) {

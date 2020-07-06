@@ -4,7 +4,7 @@ config = ipcRenderer.sendSync("requestConfig", "");
 liveDir = appPath + "/data/live";
 
 //
-var path = require("path");
+const path = require("path");
 const openExplorer = require("open-file-explorer");
 const { exec } = require("child_process");
 //
@@ -66,7 +66,7 @@ function insertQAButton(file) {
 function QASetActive(btn) {
     files = document.getElementById("filesList").childNodes;
 
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
         if (files[i].id == "fileSelector") {
             files[i].classList.remove("activeButton");
         }

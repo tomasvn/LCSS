@@ -1,8 +1,8 @@
+const path = require("path");
+const fs = require("fs");
 const { ipcRenderer } = require("electron");
 const ncp = require("ncp").ncp;
-var path = require("path");
 const chokidar = require("chokidar");
-const fs = require("fs");
 const remote = require("electron").remote;
 
 config = ipcRenderer.sendSync("requestConfig", "");

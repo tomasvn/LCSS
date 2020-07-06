@@ -1,6 +1,6 @@
 // CSS objekt zu string machen (mit formatierung)
 
-tabsCount = 0;
+let tabsCount = 0;
 
 // css objekt zu string parsen
 function parseCSS(object, extractedData) {

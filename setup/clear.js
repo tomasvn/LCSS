@@ -1,5 +1,5 @@
 const fs = require("fs");
-pathModule = require("path");
+const pathModule = require("path");
 
 console.log("clearing up...");
 

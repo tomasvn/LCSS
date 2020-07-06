@@ -1,7 +1,7 @@
 // imports
-fs = require("fs");
+const fs = require("fs");
+const path = require("path");
 const { ipcRenderer } = require("electron");
-var path = require("path");
 const remote = require("electron").remote;
 
 appPath = remote.app.getAppPath();
@@ -72,7 +72,7 @@ function removeLinks(sources) {
             }
         });
 
-        for (i = 0; i < imports.length; i++) {
+        for (let i = 0; i < imports.length; i++) {
             if (
                 imports[i].innerHTML
                     .toLowerCase()
@@ -146,9 +146,9 @@ function updateCSS() {
 }
 
 function insertTools() {
-    var elements = document.body.getElementsByTagName("*");
+    const elements = document.body.getElementsByTagName("*");
 
-    for (i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         if (elements[i].onclick == null) {
             elements[i].onclick = function () {
                 if (cooldownStatus == false) {
@@ -162,7 +162,7 @@ function insertTools() {
 }
 
 function coolDown() {
-    cooldownStatus = true;
+    let cooldownStatus = true;
 
     setTimeout(function () {
         cooldownStatus = false;
